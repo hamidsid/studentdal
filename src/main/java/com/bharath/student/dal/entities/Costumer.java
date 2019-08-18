@@ -1,14 +1,22 @@
 package com.bharath.student.dal.entities;
 
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "costumer")
 public class Costumer {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "cname")
     private String name;
+
+    @Column(name = "cemail")
     private String email;
 
-    @Id
+
     public long getId() {
         return id;
     }
