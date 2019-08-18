@@ -1,11 +1,14 @@
 package com.bharath.student.dal.entities;
 
+import javax.persistence.Id;
+
 public class Costumer {
 
     private long id;
     private String name;
     private String email;
 
+    @Id
     public long getId() {
         return id;
     }
